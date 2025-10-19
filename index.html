@@ -591,10 +591,12 @@
                         Online-Erfolgsgeschichten verwandeln.</p>
                 </div>
                 <div class="footer__links">
-                    <a href="#" class="footer__link" data-de="Datenschutzrichtlinie"
+                    <a href="#" class="footer__link modal-trigger" data-modal="privacy-modal" data-de="Datenschutzrichtlinie"
                         data-en="Privacy Policy">Datenschutzrichtlinie</a>
-                    <a href="#" class="footer__link" data-de="Nutzungsbedingungen"
+                    <a href="#" class="footer__link modal-trigger" data-modal="terms-modal" data-de="Nutzungsbedingungen"
                         data-en="Terms of Service">Nutzungsbedingungen</a>
+                    <a href="#" class="footer__link modal-trigger" data-modal="impressum-modal" data-de="Impressum"
+                        data-en="Imprint">Impressum</a>
                 </div>
             </div>
             <div class="footer__bottom">
@@ -611,6 +613,292 @@
             <polyline points="18,15 12,9 6,15"></polyline>
         </svg>
     </button>
+
+    <!-- Modal Popups -->
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal__content">
+            <span class="modal__close" data-modal="privacy-modal">&times;</span>
+            <h2 class="modal__title" data-de="Datenschutzrichtlinie" data-en="Privacy Policy">Datenschutzrichtlinie</h2>
+            <div class="modal__body">
+                <div data-de="
+                    <h3>1. Datenschutz auf einen Blick</h3>
+                    <p><strong>Allgemeine Hinweise:</strong> Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.</p>
+                    
+                    <h3>2. Datenerfassung auf dieser Website</h3>
+                    <p><strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong></p>
+                    <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.</p>
+                    
+                    <h3>3. Wie erfassen wir Ihre Daten?</h3>
+                    <p>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben.</p>
+                    <p>Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).</p>
+                    
+                    <h3>4. Wofür nutzen wir Ihre Daten?</h3>
+                    <p>Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.</p>
+                    
+                    <h3>5. Welche Rechte haben Sie bezüglich Ihrer Daten?</h3>
+                    <p>Sie haben jederzeit das Recht unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen.</p>
+                    
+                    <h3>6. Kontaktformular</h3>
+                    <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.</p>
+                " data-en="
+                    <h3>1. Data Protection at a Glance</h3>
+                    <p><strong>General Information:</strong> The following notes provide a simple overview of what happens to your personal data when you visit this website.</p>
+                    
+                    <h3>2. Data Collection on This Website</h3>
+                    <p><strong>Who is responsible for data collection on this website?</strong></p>
+                    <p>Data processing on this website is carried out by the website operator. You can find their contact details in the imprint of this website.</p>
+                    
+                    <h3>3. How Do We Collect Your Data?</h3>
+                    <p>Your data is collected when you provide it to us. This may be data you enter into a contact form, for example.</p>
+                    <p>Other data is automatically collected by our IT systems when you visit the website. This is primarily technical data (e.g. internet browser, operating system, or time of page access).</p>
+                    
+                    <h3>4. What Do We Use Your Data For?</h3>
+                    <p>Part of the data is collected to ensure error-free provision of the website. Other data may be used to analyze your user behavior.</p>
+                    
+                    <h3>5. What Rights Do You Have Regarding Your Data?</h3>
+                    <p>You have the right to receive information about the origin, recipient, and purpose of your stored personal data free of charge at any time. You also have the right to request correction, blocking, or deletion of this data.</p>
+                    
+                    <h3>6. Contact Form</h3>
+                    <p>If you send us inquiries via the contact form, your details from the inquiry form, including the contact data you provided, will be stored by us for processing the inquiry and in case of follow-up questions.</p>
+                ">
+                    <h3>1. Datenschutz auf einen Blick</h3>
+                    <p><strong>Allgemeine Hinweise:</strong> Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.</p>
+                    
+                    <h3>2. Datenerfassung auf dieser Website</h3>
+                    <p><strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong></p>
+                    <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.</p>
+                    
+                    <h3>3. Wie erfassen wir Ihre Daten?</h3>
+                    <p>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben.</p>
+                    <p>Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).</p>
+                    
+                    <h3>4. Wofür nutzen wir Ihre Daten?</h3>
+                    <p>Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.</p>
+                    
+                    <h3>5. Welche Rechte haben Sie bezüglich Ihrer Daten?</h3>
+                    <p>Sie haben jederzeit das Recht unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen.</p>
+                    
+                    <h3>6. Kontaktformular</h3>
+                    <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div id="terms-modal" class="modal">
+        <div class="modal__content">
+            <span class="modal__close" data-modal="terms-modal">&times;</span>
+            <h2 class="modal__title" data-de="Nutzungsbedingungen" data-en="Terms of Service">Nutzungsbedingungen</h2>
+            <div class="modal__body">
+                <div data-de="
+                    <h3>1. Geltungsbereich</h3>
+                    <p>Diese Nutzungsbedingungen gelten für die Nutzung der Website www.goshopify.com und die darüber angebotenen Dienstleistungen.</p>
+                    
+                    <h3>2. Leistungen</h3>
+                    <p>GoShopify bietet Beratungsdienstleistungen für die Einrichtung und Optimierung von Shopify-E-Commerce-Stores. Die konkreten Leistungen werden in separaten Verträgen vereinbart.</p>
+                    
+                    <h3>3. Vertragsschluss</h3>
+                    <p>Ein Vertrag kommt durch die Annahme unseres Angebots oder durch die Bestätigung Ihrer Bestellung zustande. Wir behalten uns das Recht vor, Aufträge abzulehnen.</p>
+                    
+                    <h3>4. Preise und Zahlungsbedingungen</h3>
+                    <p>Alle Preise verstehen sich zzgl. der gesetzlichen Mehrwertsteuer. Die Zahlung erfolgt nach den vereinbarten Zahlungsbedingungen.</p>
+                    
+                    <h3>5. Urheberrecht</h3>
+                    <p>Alle Inhalte dieser Website sind urheberrechtlich geschützt. Die Vervielfältigung, Bearbeitung oder Verbreitung bedarf unserer schriftlichen Zustimmung.</p>
+                    
+                    <h3>6. Haftungsausschluss</h3>
+                    <p>Wir haften nur für Vorsatz und grobe Fahrlässigkeit. Die Haftung für leichte Fahrlässigkeit ist ausgeschlossen, soweit nicht Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit resultieren.</p>
+                    
+                    <h3>7. Gerichtsstand</h3>
+                    <p>Gerichtsstand für alle Streitigkeiten ist unser Geschäftssitz. Es gilt deutsches Recht.</p>
+                " data-en="
+                    <h3>1. Scope of Application</h3>
+                    <p>These terms of service apply to the use of the website www.goshopify.com and the services offered through it.</p>
+                    
+                    <h3>2. Services</h3>
+                    <p>GoShopify provides consulting services for setting up and optimizing Shopify e-commerce stores. Specific services are agreed upon in separate contracts.</p>
+                    
+                    <h3>3. Contract Formation</h3>
+                    <p>A contract is formed by accepting our offer or by confirming your order. We reserve the right to decline orders.</p>
+                    
+                    <h3>4. Prices and Payment Terms</h3>
+                    <p>All prices are plus statutory VAT. Payment is made according to the agreed payment terms.</p>
+                    
+                    <h3>5. Copyright</h3>
+                    <p>All content on this website is protected by copyright. Reproduction, editing, or distribution requires our written consent.</p>
+                    
+                    <h3>6. Limitation of Liability</h3>
+                    <p>We are only liable for intent and gross negligence. Liability for slight negligence is excluded, unless damages result from injury to life, body, or health.</p>
+                    
+                    <h3>7. Place of Jurisdiction</h3>
+                    <p>The place of jurisdiction for all disputes is our place of business. German law applies.</p>
+                ">
+                    <h3>1. Geltungsbereich</h3>
+                    <p>Diese Nutzungsbedingungen gelten für die Nutzung der Website www.goshopify.com und die darüber angebotenen Dienstleistungen.</p>
+                    
+                    <h3>2. Leistungen</h3>
+                    <p>GoShopify bietet Beratungsdienstleistungen für die Einrichtung und Optimierung von Shopify-E-Commerce-Stores. Die konkreten Leistungen werden in separaten Verträgen vereinbart.</p>
+                    
+                    <h3>3. Vertragsschluss</h3>
+                    <p>Ein Vertrag kommt durch die Annahme unseres Angebots oder durch die Bestätigung Ihrer Bestellung zustande. Wir behalten uns das Recht vor, Aufträge abzulehnen.</p>
+                    
+                    <h3>4. Preise und Zahlungsbedingungen</h3>
+                    <p>Alle Preise verstehen sich zzgl. der gesetzlichen Mehrwertsteuer. Die Zahlung erfolgt nach den vereinbarten Zahlungsbedingungen.</p>
+                    
+                    <h3>5. Urheberrecht</h3>
+                    <p>Alle Inhalte dieser Website sind urheberrechtlich geschützt. Die Vervielfältigung, Bearbeitung oder Verbreitung bedarf unserer schriftlichen Zustimmung.</p>
+                    
+                    <h3>6. Haftungsausschluss</h3>
+                    <p>Wir haften nur für Vorsatz und grobe Fahrlässigkeit. Die Haftung für leichte Fahrlässigkeit ist ausgeschlossen, soweit nicht Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit resultieren.</p>
+                    
+                    <h3>7. Gerichtsstand</h3>
+                    <p>Gerichtsstand für alle Streitigkeiten ist unser Geschäftssitz. Es gilt deutsches Recht.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Impressum Modal -->
+    <div id="impressum-modal" class="modal">
+        <div class="modal__content">
+            <span class="modal__close" data-modal="impressum-modal">&times;</span>
+            <h2 class="modal__title" data-de="Impressum" data-en="Imprint">Impressum</h2>
+            <div class="modal__body">
+                <div data-de="
+                    <h3>Angaben gemäß § 5 TMG</h3>
+                    <p>
+                        GoShopify<br>
+                        Max Mustermann<br>
+                        Musterstraße 123<br>
+                        12345 Musterstadt<br>
+                        Deutschland
+                    </p>
+                    
+                    <h3>Kontakt</h3>
+                    <p>
+                        Telefon: +49 (0) 123 456789<br>
+                        E-Mail: hello@goshopify.com
+                    </p>
+                    
+                    <h3>Umsatzsteuer-ID</h3>
+                    <p>
+                        Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
+                        DE123456789
+                    </p>
+                    
+                    <h3>Berufsbezeichnung und berufsrechtliche Regelungen</h3>
+                    <p>
+                        Berufsbezeichnung: Shopify Partner & E-Commerce-Berater<br>
+                        Zuständige Kammer: IHK Musterstadt<br>
+                        Verliehen durch: Deutschland
+                    </p>
+                    
+                    <h3>Redaktionell verantwortlich</h3>
+                    <p>
+                        Max Mustermann<br>
+                        Musterstraße 123<br>
+                        12345 Musterstadt<br>
+                        Deutschland
+                    </p>
+                    
+                    <h3>EU-Streitschlichtung</h3>
+                    <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href='https://ec.europa.eu/consumers/odr/' target='_blank'>https://ec.europa.eu/consumers/odr/</a><br>
+                    Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
+                    
+                    <h3>Verbraucherstreitbeilegung/Universalschlichtungsstelle</h3>
+                    <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+                " data-en="
+                    <h3>Information according to § 5 TMG</h3>
+                    <p>
+                        GoShopify<br>
+                        Max Mustermann<br>
+                        Musterstraße 123<br>
+                        12345 Musterstadt<br>
+                        Germany
+                    </p>
+                    
+                    <h3>Contact</h3>
+                    <p>
+                        Phone: +49 (0) 123 456789<br>
+                        Email: hello@goshopify.com
+                    </p>
+                    
+                    <h3>VAT ID</h3>
+                    <p>
+                        Value Added Tax Identification Number according to § 27 a VAT Tax Act:<br>
+                        DE123456789
+                    </p>
+                    
+                    <h3>Professional Title and Professional Regulations</h3>
+                    <p>
+                        Professional Title: Shopify Partner & E-Commerce Consultant<br>
+                        Responsible Chamber: IHK Musterstadt<br>
+                        Granted by: Germany
+                    </p>
+                    
+                    <h3>Editorially Responsible</h3>
+                    <p>
+                        Max Mustermann<br>
+                        Musterstraße 123<br>
+                        12345 Musterstadt<br>
+                        Germany
+                    </p>
+                    
+                    <h3>EU Dispute Resolution</h3>
+                    <p>The European Commission provides a platform for online dispute resolution (OS): <a href='https://ec.europa.eu/consumers/odr/' target='_blank'>https://ec.europa.eu/consumers/odr/</a><br>
+                    You can find our email address above in the imprint.</p>
+                    
+                    <h3>Consumer Dispute Resolution/Universal Arbitration Board</h3>
+                    <p>We are not willing or obligated to participate in dispute resolution procedures before a consumer arbitration board.</p>
+                ">
+                    <h3>Angaben gemäß § 5 TMG</h3>
+                    <p>
+                        GoShopify<br>
+                        Max Mustermann<br>
+                        Musterstraße 123<br>
+                        12345 Musterstadt<br>
+                        Deutschland
+                    </p>
+                    
+                    <h3>Kontakt</h3>
+                    <p>
+                        Telefon: +49 (0) 123 456789<br>
+                        E-Mail: hello@goshopify.com
+                    </p>
+                    
+                    <h3>Umsatzsteuer-ID</h3>
+                    <p>
+                        Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
+                        DE123456789
+                    </p>
+                    
+                    <h3>Berufsbezeichnung und berufsrechtliche Regelungen</h3>
+                    <p>
+                        Berufsbezeichnung: Shopify Partner & E-Commerce-Berater<br>
+                        Zuständige Kammer: IHK Musterstadt<br>
+                        Verliehen durch: Deutschland
+                    </p>
+                    
+                    <h3>Redaktionell verantwortlich</h3>
+                    <p>
+                        Max Mustermann<br>
+                        Musterstraße 123<br>
+                        12345 Musterstadt<br>
+                        Deutschland
+                    </p>
+                    
+                    <h3>EU-Streitschlichtung</h3>
+                    <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href='https://ec.europa.eu/consumers/odr/' target='_blank'>https://ec.europa.eu/consumers/odr/</a><br>
+                    Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
+                    
+                    <h3>Verbraucherstreitbeilegung/Universalschlichtungsstelle</h3>
+                    <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

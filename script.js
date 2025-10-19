@@ -53,6 +53,9 @@ function switchLanguage(lang) {
     
     // Store language preference
     localStorage.setItem('preferredLanguage', lang);
+    
+    // Update modal content if any modal is open
+    updateModalLanguageOnSwitch();
 }
 
 // Language button event listeners
@@ -493,8 +496,10 @@ function preloadResources() {
     criticalLinks.forEach(link => {
         link.addEventListener('mouseenter', () => {
             const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            if (targetSection) {
+            // Skip if targetId is just '#' or empty
+            if (targetId && targetId !== '#' && targetId.length > 1) {
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
                 // Preload any images in the target section
                 const images = targetSection.querySelectorAll('img');
                 images.forEach(img => {
@@ -502,6 +507,7 @@ function preloadResources() {
                         img.src = img.dataset.src;
                     }
                 });
+                }
             }
         });
     });
@@ -670,11 +676,147 @@ window.addEventListener('scroll', throttle(() => {
     }
 }, 1000));
 
+// ===== MODAL FUNCTIONALITY =====
+const modalTriggers = document.querySelectorAll('.modal-trigger');
+const modals = document.querySelectorAll('.modal');
+const modalCloses = document.querySelectorAll('.modal__close');
+let currentOpenModal = null;
+
+// Update modal language when language is switched
+function updateModalLanguageOnSwitch() {
+    if (currentOpenModal) {
+        updateModalLanguage(currentOpenModal);
+    }
+}
+
+// Open modal
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        // Close any currently open modal
+        if (currentOpenModal) {
+            closeModal(currentOpenModal.id);
+        }
+        
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        currentOpenModal = modal;
+        
+        // Update modal content based on current language
+        updateModalLanguage(modal);
+        
+        // Track modal opening
+        trackEvent('modal_open', {
+            modal_type: modalId.replace('-modal', '')
+        });
+        
+        // Focus trap
+        trapFocus(modal);
+    }
+}
+
+// Close modal
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        currentOpenModal = null;
+        
+        // Track modal closing
+        trackEvent('modal_close', {
+            modal_type: modalId.replace('-modal', '')
+        });
+    }
+}
+
+// Update modal content based on current language
+function updateModalLanguage(modal) {
+    const elementsWithLang = modal.querySelectorAll('[data-de][data-en]');
+    
+    elementsWithLang.forEach(element => {
+        const content = element.getAttribute(`data-${currentLanguage}`);
+        if (content) {
+            element.innerHTML = content;
+        }
+    });
+}
+
+// Focus trap for accessibility
+function trapFocus(modal) {
+    const focusableElements = modal.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+    
+    // Focus first element
+    if (firstElement) {
+        firstElement.focus();
+    }
+    
+    modal.addEventListener('keydown', (e) => {
+        if (e.key === 'Tab') {
+            if (e.shiftKey) {
+                if (document.activeElement === firstElement) {
+                    e.preventDefault();
+                    lastElement.focus();
+                }
+            } else {
+                if (document.activeElement === lastElement) {
+                    e.preventDefault();
+                    firstElement.focus();
+                }
+            }
+        }
+    });
+}
+
+// Event listeners for modal triggers
+modalTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        const modalId = trigger.getAttribute('data-modal');
+        if (modalId) {
+            openModal(modalId);
+        }
+    });
+});
+
+// Event listeners for modal close buttons
+modalCloses.forEach(closeBtn => {
+    closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const modalId = closeBtn.getAttribute('data-modal');
+        if (modalId) {
+            closeModal(modalId);
+        }
+    });
+});
+
+// Close modal when clicking outside
+modals.forEach(modal => {
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal(modal.id);
+        }
+    });
+});
+
+// Close modal on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && currentOpenModal) {
+        closeModal(currentOpenModal.id);
+    }
+});
+
 // ===== EXPORT FOR TESTING =====
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         isValidEmail,
         showTestimonial,
-        trackEvent
+        trackEvent,
+        openModal,
+        closeModal
     };
 }
