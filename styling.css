@@ -490,24 +490,13 @@ textarea {
   border-radius: var(--border-radius-lg);
   padding: 2.5rem 2rem;
   position: relative;
-  transition: var(--transition-medium);
   text-align: center;
-}
-
-.pricing__card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-strong);
-  border-color: var(--primary-color);
 }
 
 .pricing__card--popular {
   border-color: var(--primary-color);
   transform: scale(1.05);
   box-shadow: var(--shadow-strong);
-}
-
-.pricing__card--popular:hover {
-  transform: scale(1.05) translateY(-8px);
 }
 
 .pricing__badge {
@@ -1042,10 +1031,6 @@ textarea {
   
   .pricing__card--popular {
     transform: none;
-  }
-  
-  .pricing__card--popular:hover {
-    transform: translateY(-8px);
   }
   
   .footer__content {
