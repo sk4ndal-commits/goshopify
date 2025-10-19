@@ -265,26 +265,31 @@ textarea {
 }
 
 .lang-btn {
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem;
   border: 2px solid var(--gray-color-light);
   background-color: transparent;
   color: var(--text-color);
   border-radius: var(--border-radius-sm);
-  font-size: var(--small-font-size);
+  font-size: 1.2rem;
   font-weight: var(--font-medium);
   cursor: pointer;
   transition: var(--transition-fast);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .lang-btn:hover {
   border-color: var(--primary-color);
-  color: var(--primary-color);
+  transform: scale(1.1);
 }
 
 .lang-btn.active {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
-  color: var(--white-color);
+  box-shadow: var(--shadow-medium);
 }
 
 .nav__toggle {
