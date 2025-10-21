@@ -612,6 +612,7 @@ textarea {
   color: var(--text-color);
   line-height: 1.5;
   font-size: 1.1rem;
+  font-weight: var(--font-medium);
 }
 
 .pricing__features {
@@ -656,6 +657,27 @@ textarea {
 
 .pricing__card--popular .pricing__check {
   background-color: var(--primary-color-dark);
+}
+
+.pricing__cta {
+  margin-top: 1.5rem;
+}
+
+.pricing__trust {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: var(--gray-color);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--gray-color-light);
+}
+
+.pricing__trust-text {
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: var(--font-medium);
+  margin: 0;
 }
 
 /* ===== CHECKLIST SECTION ===== */
