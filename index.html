@@ -522,28 +522,63 @@
                 data-de="Erhalten Sie Ihre kostenlose Analyse und personalisierte Strategie"
                 data-en="Get your free audit and personalized strategy">Erhalten Sie Ihre kostenlose Analyse und
                 personalisierte Strategie</p>
+            
+            <p class="contact__intro fade-in" 
+                data-de="Erzählen Sie uns kurz von Ihrem Unternehmen – so können wir eine auf Sie zugeschnittene Strategie vorbereiten."
+                data-en="Tell us briefly about your company – so we can prepare a strategy tailored to you.">
+                Erzählen Sie uns kurz von Ihrem Unternehmen – so können wir eine auf Sie zugeschnittene Strategie vorbereiten.
+            </p>
 
             <div class="contact__content">
                 <form class="contact__form fade-in" id="contact-form">
-                    <div class="form__group">
-                        <input type="text" id="name" name="name" class="form__input" placeholder="Ihr Name"
-                            data-placeholder-de="Ihr Name" data-placeholder-en="Your Name" required>
-                        <span class="form__error" id="name-error"></span>
+                    <div class="form__row">
+                        <div class="form__group">
+                            <input type="text" id="name" name="name" class="form__input" placeholder="Ihr Name"
+                                data-placeholder-de="Ihr Name" data-placeholder-en="Your Name" required>
+                            <span class="form__error" id="name-error"></span>
+                        </div>
+                        <div class="form__group">
+                            <input type="email" id="email" name="email" class="form__input" placeholder="Ihre E-Mail"
+                                data-placeholder-de="Ihre E-Mail" data-placeholder-en="Your Email" required>
+                            <span class="form__error" id="email-error"></span>
+                        </div>
                     </div>
-                    <div class="form__group">
-                        <input type="email" id="email" name="email" class="form__input" placeholder="Ihre E-Mail"
-                            data-placeholder-de="Ihre E-Mail" data-placeholder-en="Your Email" required>
-                        <span class="form__error" id="email-error"></span>
+                    
+                    <div class="form__row">
+                        <div class="form__group">
+                            <select id="company-size" name="company-size" class="form__input" required>
+                                <option value="" data-de="Unternehmensgröße auswählen" data-en="Select company size">Unternehmensgröße auswählen</option>
+                                <option value="1-5" data-de="1-5 Mitarbeiter" data-en="1-5 employees">1-5 Mitarbeiter</option>
+                                <option value="6-20" data-de="6-20 Mitarbeiter" data-en="6-20 employees">6-20 Mitarbeiter</option>
+                                <option value="21+" data-de="21+ Mitarbeiter" data-en="21+ employees">21+ Mitarbeiter</option>
+                            </select>
+                            <span class="form__error" id="company-size-error"></span>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" id="industry" name="industry" class="form__input" placeholder="Branche"
+                                data-placeholder-de="Branche (z.B. Einzelhandel, Handwerk, Dienstleistung)"
+                                data-placeholder-en="Industry (e.g. Retail, Crafts, Services)">
+                            <span class="form__error" id="industry-error"></span>
+                        </div>
                     </div>
+                    
+                    <div class="form__group">
+                        <textarea id="goals" name="goals" class="form__input form__textarea"
+                            placeholder="Was möchten Sie mit Ihrem Online-Shop erreichen?"
+                            data-placeholder-de="Was möchten Sie mit Ihrem Online-Shop erreichen? (z.B. Umsatzsteigerung, Neukundengewinnung, Prozessautomatisierung)"
+                            data-placeholder-en="What do you want to achieve with your online store? (e.g. revenue growth, new customer acquisition, process automation)" rows="3" required></textarea>
+                        <span class="form__error" id="goals-error"></span>
+                    </div>
+                    
                     <div class="form__group">
                         <textarea id="message" name="message" class="form__input form__textarea"
-                            placeholder="Erzählen Sie uns von Ihrem Unternehmen und Ihren Zielen"
-                            data-placeholder-de="Erzählen Sie uns von Ihrem Unternehmen und Ihren Zielen"
-                            data-placeholder-en="Tell us about your business and goals" rows="5" required></textarea>
+                            placeholder="Weitere Details oder spezielle Anforderungen"
+                            data-placeholder-de="Weitere Details oder spezielle Anforderungen (optional)"
+                            data-placeholder-en="Additional details or special requirements (optional)" rows="4"></textarea>
                         <span class="form__error" id="message-error"></span>
                     </div>
-                    <button type="submit" class="btn btn--primary btn--full" data-de="Kostenlose Analyse anfordern"
-                        data-en="Request Free Audit">Kostenlose Analyse anfordern</button>
+                    <button type="submit" class="btn btn--primary btn--full" data-de="Kostenlose Strategie-Session anfordern"
+                        data-en="Request Free Strategy Session">Kostenlose Strategie-Session anfordern</button>
                 </form>
 
                 <div class="contact__info fade-in">

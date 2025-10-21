@@ -853,6 +853,16 @@ textarea {
 }
 
 /* ===== CONTACT SECTION ===== */
+.contact__intro {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  margin: 0 auto 3rem;
+  max-width: 700px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
 .contact__content {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -869,8 +879,19 @@ textarea {
   box-shadow: var(--shadow-light);
 }
 
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 .form__group {
   margin-bottom: 1.5rem;
+}
+
+.form__row .form__group {
+  margin-bottom: 0;
 }
 
 .form__input {
@@ -1267,6 +1288,15 @@ textarea {
   
   .process__timeline {
     grid-template-columns: 1fr;
+  }
+  
+  .form__row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .form__row .form__group {
+    margin-bottom: 1.5rem;
   }
 }
 

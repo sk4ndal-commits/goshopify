@@ -23,6 +23,8 @@ function switchLanguage(lang) {
         if (text) {
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = text;
+            } else if (element.tagName === 'OPTION') {
+                element.textContent = text;
             } else {
                 // Use innerHTML instead of textContent to allow HTML formatting
                 element.innerHTML = text;
@@ -193,6 +195,9 @@ function handleFormSubmission(e) {
     const formData = new FormData(contactForm);
     const name = formData.get('name').trim();
     const email = formData.get('email').trim();
+    const companySize = formData.get('company-size');
+    const industry = formData.get('industry').trim();
+    const goals = formData.get('goals').trim();
     const message = formData.get('message').trim();
     
     // Clear previous errors
@@ -212,11 +217,20 @@ function handleFormSubmission(e) {
         isValid = false;
     }
     
-    // Validate message
-    if (message.length < 10) {
-        showFormError('message', 'Message must be at least 10 characters long');
+    // Validate company size
+    if (!companySize) {
+        showFormError('company-size', 'Please select your company size');
         isValid = false;
     }
+    
+    // Validate goals
+    if (goals.length < 10) {
+        showFormError('goals', 'Please describe your goals (minimum 10 characters)');
+        isValid = false;
+    }
+    
+    // Industry is optional, no validation needed
+    // Message is optional, no validation needed
     
     if (isValid) {
         submitForm(formData);
@@ -239,11 +253,15 @@ function showFormError(fieldName, message) {
             de: {
                 name: 'Name muss mindestens 2 Zeichen lang sein',
                 email: 'Bitte geben Sie eine gültige E-Mail-Adresse ein',
+                'company-size': 'Bitte wählen Sie Ihre Unternehmensgröße aus',
+                goals: 'Bitte beschreiben Sie Ihre Ziele (mindestens 10 Zeichen)',
                 message: 'Nachricht muss mindestens 10 Zeichen lang sein'
             },
             en: {
                 name: 'Name must be at least 2 characters long',
                 email: 'Please enter a valid email address',
+                'company-size': 'Please select your company size',
+                goals: 'Please describe your goals (minimum 10 characters)',
                 message: 'Message must be at least 10 characters long'
             }
         };
