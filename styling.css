@@ -419,8 +419,68 @@ textarea {
 
 .service__title {
   font-size: var(--h3-font-size);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: var(--dark-color);
+}
+
+.service__problem {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #fafafa;
+  border-left: 3px solid #e2e8f0;
+  border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+}
+
+.service__problem p {
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.service__solution {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #fafafa;
+  border-left: 3px solid #cbd5e1;
+  border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+}
+
+.service__solution p {
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.service__result {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #fafafa;
+  border-left: 3px solid #94a3b8;
+  border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+}
+
+.service__result p {
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.service__transformation {
+  padding: 1rem;
+  background-color: #f8fafc;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--gray-color-light);
+}
+
+.service__transformation p {
+  color: var(--dark-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  margin: 0;
+  text-align: center;
 }
 
 .service__description {
@@ -1217,6 +1277,21 @@ textarea {
   
   .service__card {
     padding: 2rem 1.5rem;
+  }
+  
+  .service__problem,
+  .service__solution,
+  .service__result,
+  .service__transformation {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .service__problem p,
+  .service__solution p,
+  .service__result p,
+  .service__transformation p {
+    font-size: 0.875rem;
   }
   
   .pricing__grid {

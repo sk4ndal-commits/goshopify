@@ -24,7 +24,8 @@ function switchLanguage(lang) {
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = text;
             } else {
-                element.textContent = text;
+                // Use innerHTML instead of textContent to allow HTML formatting
+                element.innerHTML = text;
             }
         }
     });
