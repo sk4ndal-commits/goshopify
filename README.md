@@ -1,4 +1,4 @@
-# GoShopify - Multilingual Shopify Consulting Website
+# saleafy - Multilingual Shopify Consulting Website
 
 A professional, responsive, and multilingual single-page website for a Shopify consulting business that helps offline small and medium-sized enterprises (SMEs) transition to online sales.
 
@@ -173,14 +173,14 @@ Change font family in CSS:
 
 ## 📞 Contact Information
 
-**GoShopify**
-- Email: hello@goshopify.com
+**saleafy**
+- Email: hello@saleafy.com
 - Website: [Your Domain]
 - LinkedIn: [Your LinkedIn Profile]
 
 ## 📄 License
 
-This project is developed for GoShopify consulting services.
+This project is developed for saleafy consulting services.
 
 ## 🤝 Contributing
 
@@ -202,5 +202,6 @@ This project is developed for GoShopify consulting services.
 
 ---
 
-**Built with ❤️ for small and medium-sized enterprises looking to grow their online presence.**# goshopify
-# goshopify
+**Built with ❤️ for small and medium-sized enterprises looking to grow their online presence.**
+
+# saleafy
